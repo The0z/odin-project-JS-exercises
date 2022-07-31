@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open the Console!</title>
+    <script>
+        //These comments are okay, but would be better in actual production project.
+
+        //Add 7 to a number and return the number
+        function add7(num){
+            return num + 7;
+        }
+        
+        //Multiply two numbers and return the result
+        function multiply(num1, num2){
+            return num1 * num2;
+        }
+        
+        //Capitalize the first letter only and return the result
+        function capitalize(str){
+            let len = str.length;
+            //The last part works because of len. If len is 1, slice(1,1) = ""
+            return str.slice(0,1).toUpperCase() + str.slice(1,len).toLowerCase();
+            
+        }
+
+        function lastLetter(str){
+            let len = str.length;
+            return str.slice(len-1, len);
+        }
+
+        console.log("Testing add7.", "Should return 16");
+        console.log(add7(9)); //should return 16
+        
+        console.log("Testing multiply Now.", "Should Return 80");
+        console.log(multiply(8,10));
+        
+        console.log("Testing capitalize Now");
+        console.log(capitalize('hello'));
+        console.log(capitalize('HELLO'));
+        console.log(capitalize('hELLO'));
+        console.log(capitalize('i'));
+
+        console.log("Testing last Letter. Should return d");
+        console.log(lastLetter("abcd"));
+
+    </script>
+</head>
+<body>
+    <h1>Open the console to check the JS out!</h1>
+</body>
+</html>
